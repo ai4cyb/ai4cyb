@@ -1,113 +1,36 @@
-\documentclass[9pt]{article}
-% Smaller margins using geometry
-\usepackage[a4paper, margin=1in]{geometry} % Try margin=0.75in for even tighter layout
+\documentclass[9pt]{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage[a4paper,margin=1in]{geometry}%
+\usepackage{xcolor}%
+\usepackage{graphicx}%
+\usepackage{subcaption}%
+\usepackage{caption}%
+%
+\title{Lab-4\\Group-20}%
+\author{Arthur Humblot - s350872, Bekhzod Anvarov - s316063,\\Ghita El Belghiti - s361421}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+\section{Task 1: Dataset Characterization}%
+\label{sec:Task1DatasetCharacterization}%
 
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{caption}
+%
+\section{Task 2: Tokenization}%
+\label{sec:Task2Tokenization}%
 
-\newcommand{\placeholder}{\textcolor{red}{[PLACEHOLDER]~}}
+%
+\section{Task 3: Model Training}%
+\label{sec:Task3ModelTraining}%
 
-\title{Lab-X\\Group-Y}
+%
+\section{Task 3: Model Training}%
+\label{sec:Task3ModelTraining}%
 
-\author{Matteo Boffa - s$\textless$matricola$\textgreater$, Danilo Giordano - s$\textless$matricola$\textgreater$, \\ Pinco Pallino - s$\textless$matricola$\textgreater$}
-\date{}
-
-\begin{document}
-
-\maketitle
-
-\section{Practical Recommendations}
-
-\noindent This section outlines the practical aspects of the laboratory project, including group organization, submission procedures, report formatting, and code requirements. Please read these guidelines carefully to ensure your work is correctly structured, complete, and ready for evaluation. Following these instructions will help streamline the review process and avoid common mistakes that could impact your final assessment.
-
-\subsection{On the groups}
-\begin{itemize}
-    \item Each group consists of three (3) members.
-     \item Members of the same group must join a group in the Moodle of the course before submitting their reports.
-     \begin{itemize}
-         \item If you intend to submit your reports on the dates of January/February, register to a group as soon as possible.
-         \item Groups can register up to the \textbf{30th of November}.
-         \item The name of the group is irrelevant.
-     \end{itemize}
-     \item The order of the members is not relevant (e.g., use alphabetical order).
-\end{itemize}
-
-\subsection{On the delivery}
-
-We expect all groups to deliver a \textbf{submission} on their laboratory experience using the Moodle of the course. For each laboratory, groups will produce a zip file. Each file contains a textual report and the corresponding Jupyter notebook(s) and code (e.g., libraries with classes and functions written by you).\\
-
-\textbf{Regarding the submission:}
-\begin{itemize}
-    \item Groups that submit a ``reasonable'' solution for the first lab before the 1st December will receive +1 bonus point for the exam.
-    \item All other labs (from second lab on) will be evaluated independently.
-    \item Submitting the 1st lab solution is mandatory even if the solution is submitted after the 1st December deadline. 
-    \item The submission deadline is 10 days before the exam date (e.g., if the exam is at the 25th of January, the submission deadline is January 15th, 23:59 CEST.).
-    \item It is NOT mandatory to submit the reports and take the written exam on the same exam call. For example, you can submit the reports on the first exam call and have the the written exam on the second exam call (and vice versa).
-    \item Resubmissions are only permitted (and mandatory) for negatively evaluated reports. If the reports are sufficient, \textbf{you cannot resubmit them}.
-\end{itemize}
-
-\textbf{Regarding the textual report:}
-\begin{itemize}
-    \item Each report must contain \textbf{at most} 10 pages.
-     \item Each report receives a score: the score ranges from \textbf{0} to \textbf{31}.
-     \item All reports must be positively evaluated (minimum: \textbf{18}) to pass the exam.
-     \item You can use this latex template to submit your reports (single-column, article, 9pt, 1in margins).
-     \item If you wish to use Word, use equivalent settings (single column, Times New Roman, font size=9, single interline, 1-inch margins).
-\end{itemize}
-
-\textbf{Regarding the code:}
- \begin{itemize}
-    \item Add comments and headers (Markdown) sections to understand what you are doing. They will i) help you tomorrow to understand what you did today and ii) help us to interpret your solution correctly.
-     \item \textbf{The notebook(s) must be executed}: Code and results \underline{must be visible} so that we can interpret what you have done and what the results look like.
-     \item \textbf{The notebook(s) must run}: the code must work if we need to run it again. \footnote{We will only adjust the path to the input and output data.}
-    \item Include the notebook file (\texttt{.ipynb}) and an HTML export for easier review.
- \end{itemize}
- 
-\subsection{On the content of the report}
-\begin{itemize}
-\item Create a \textbf{separate section} for each laboratory task.
-     \item Make sure that you i) cover all questions and ii) always highlight the question you are answering. It is useful for you to structure the results, and it will be easier for us to correct your reports. One way of highlighting the question is to report it in italic/bold (e.g., \textbf{Q: How many different tags do you have?} $\rightarrow$ Your answer).
-     \item Some questions have a `closed-form' (e.g., \textbf{Q: How many different tags do you have?}); others are open (e.g., \textbf{[series of tasks] Report the most important steps and intermediate results}). In the second case, we want to know i) which steps you followed (the ratio behind them) and ii) the results of these steps. For example, when pre-processing the data, you might have identified some easily recognizable outliers (e.g., infinite values) and decided to drop such rows. Why do you think dropping them is a good/acceptable decision? How many rows did you have before? How many after?
-     \item At times, you will be explicitly instructed to include plots in your report. Otherwise, you may still include plots, code snippets, or tables when they help justify your reasoning or clarify your results. Remember that additional material is valuable only if it is clearly explained and directly supports your written analysis (avoid discussing aspects that are not backed by the provided material). Ensure that all captions are informative and that your main text offers a thorough interpretation of the content. \textbf{Note}: The report must not exceed 10 pages. Any content beyond the tenth page will not be considered.
-\end{itemize}
-
-\section{Generic Recommendations}
-
-\noindent This section provides a set of general guidelines. These recommendations are meant to ensure that your work is technically sound and effectively communicated, emphasizing clarity, critical thinking, and responsible use of tools.
-
-\begin{itemize}
-    \item Although the maximum number of pages is 10, there is no `minimum number'. \textit{Simple is beautiful}, and we appreciate a short (and complete) report more than a long (and possibly inconclusive) one.
-     \item Do not accept the results `at face value'. Apply in practise what you have learned in theory to interpret your results and find out if they make sense (e.g., do not report on a training curve where the model has clearly not learned). If you suspect that a result is wrong, i) investigate carefully why this is so, and ii) ask your colleagues -- including those from other groups -- if this is a common issue. If you think you have found an explanation, make sure you explain it in your report.
-     \item It is okay to use AI as a SUPPORT tool. Just remember to: 1) interpret and understand the suggestions -- it might hallucinate -- and 2) refine the output of the model (e.g., do not report emojis). If we suspect that a group is using AI "blindly", we will summon the group members for an oral exam to explain their work in detail.
-     \item In Figure~\ref{fig:examples} you will find examples of how an image should not be reported (Figure~\ref{fig:example_blurred} and Figure~\ref{fig:example_small}). While in the first case the screenshot is clearly of poor quality, in the second case important elements for a good representation are missing (e.g., legend, \texttt{xlabel}, etc.). In Figure~\ref{fig:good_example}, all elements are present and the text elements are clearly visible.
-\end{itemize}
-
-\begin{figure}[htbp]
-  \centering
-
-  \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{examples_images/screenshot.png}
-    \caption{Bad screenshot: the image is blurred.}
-    \label{fig:example_blurred}
-  \end{subfigure}
-
-  \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{examples_images/bad_example.pdf}
-    \caption{Several elements (e.g., legend, axis, etc.) are missing; fontsize is too small.}
-    \label{fig:example_small}
-  \end{subfigure}
-  \\
-  \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{examples_images/good_example.pdf}
-    \caption{All the important elements are present; fontsize is good. You can also avoid using the title if the caption is informative.}
-    \label{fig:good_example}
-  \end{subfigure}
-
-  \caption{Two examples of bad plots (blurred, missing key elements); one example of good plot.}
-  \label{fig:examples}
-\end{figure}
-
-
+%
 \end{document}
